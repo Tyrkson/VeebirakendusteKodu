@@ -1,0 +1,87 @@
+body {
+    background-color: #1677BD;
+    font-family: Helvetica;
+  }
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+/* NAVIGATION BAR */
+.topnav {
+  top:0;
+  position:fixed;
+  display:block;
+  width:100%;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.topnav-right {
+  float: right;
+}
+
+.topnav img {
+  height: 49px;
+  width: auto;
+  padding: 6px;
+}
+
+.topnav .search-container {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: auto;
+  font-size: 17px;
+  border: 1px solid rgb(207, 207, 207);
+}
+
+.topnav .search-container button {
+  background: steelblue;
+  color: rgb(255, 255, 255);
+  float: right;
+  padding: 7px;
+  margin-top: auto;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+/* kui tahame lisada nupud navigation barile
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+*/
+
+
