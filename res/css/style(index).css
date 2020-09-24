@@ -124,7 +124,8 @@ body {
   padding: 10px;
 }
 
-.post-date {
+/* postituse kuupäev */
+.posters-profile-picture + p {
   color: gray;
   font-size: small;
   padding: 10px;
