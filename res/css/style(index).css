@@ -20,6 +20,7 @@ body {
 
 .topnav img {
   height: 49px;
+  margin-left: 40px;
   width: auto;
   padding: 6px;
 }
@@ -42,7 +43,7 @@ body {
 
 .topnav .search-container button {
   background: steelblue;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   float: right;
   padding: 7px;
   margin-top: auto;
@@ -93,14 +94,14 @@ body {
 
 /* flex box koos postitustega */
 .posts {
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   width: 40%;
 }
 
 /* ühe postituse kast/aken */
 .posts > div {
   
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   margin: 20px;
   font-size: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
