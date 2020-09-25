@@ -3,7 +3,7 @@ body {
     font-family: Helvetica;
   }
 
-  
+
 /* NAVIGATION BAR */
 .topnav {
   top:0;
@@ -60,6 +60,16 @@ body {
   background: #277DCC;
 }
 
+.post-header > p {
+  font-weight: bold;
+}
+
+.post + .post {
+  margin-top: 30px;
+}
+
+
+
 /* kui tahame lisada nupud navigation barile
 
 .topnav a {
@@ -91,7 +101,7 @@ body {
 .flex-container {
   display: flex;
   flex-direction: column;
-  width: 100%; 
+  width: 100%;
   align-items: center;
 }
 
@@ -103,7 +113,7 @@ body {
 
 /* ühe postituse kast/aken */
 .posts > div {
-  
+
   background-color: #ffffff;
   margin: 20px;
   font-size: 30px;
@@ -154,4 +164,3 @@ body {
   cursor: pointer;
 }
 .like-button:hover {opacity: 0.6}
-

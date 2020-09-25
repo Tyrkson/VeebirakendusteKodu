@@ -44,3 +44,7 @@ img {
 .link {
   text-align: center;
 }
+
+form ~ a:visited {
+  color: blue;
+}
