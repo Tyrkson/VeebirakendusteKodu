@@ -12,6 +12,7 @@ body {
   border:none;
   outline:none;
 }
+#button:hover {opacity: 0.6}
 input[type = submit] {
   margin-bottom: 10px;
 }
