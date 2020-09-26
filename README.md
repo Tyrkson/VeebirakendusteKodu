@@ -1,6 +1,6 @@
 # VeebirakendusteKodu
 
 
-Hanna Maria Mägi
-Priit Pärn
-Ahto Türkson
+Hanna Maria Mägi  
+Priit Pärn  
+Ahto Türkson  
