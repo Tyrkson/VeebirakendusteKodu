@@ -12,11 +12,6 @@ body {
   border:none;
   outline:none;
 }
-.field {
-  width: 75%;
-  padding: 15px;
-  margin: 5px;
-}
 input[type = submit] {
   margin-bottom: 10px;
 }
@@ -29,7 +24,7 @@ input[type = submit] {
   padding: 15px;
   background-color: white;
 }
-img {
+.centered-text > img {
   height: 100px;
   width: auto;
 }
@@ -38,8 +33,10 @@ img {
   text-align: center;
   font-weight: bold;
 }
-.login {
-  text-align: center;
+.login .field {
+  width: 75%;
+  padding: 15px;
+  margin: 5px;
 }
 .link {
   text-align: center;
