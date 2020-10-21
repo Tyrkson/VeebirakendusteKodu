@@ -36,11 +36,13 @@ body {
   width: 650px;
 }
 
+
 .topnav input[type=text] {
   padding: 6px;
   margin-top: auto;
   font-size: 17px;
   width: 568px;
+  width: 87.7%;
   border: 1px solid rgb(207, 207, 207);
 }
 
