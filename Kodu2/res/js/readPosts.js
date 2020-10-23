@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
   $(".main-container").on('click', 'button.like-button', function(){
-    console.log($(this).css("background-color"));
     if($(this).css("background-color") != "rgb(0, 0, 255)") $(this).css('background-color', "blue")
     else $(this).css("background-color", "#8a8a8a")
   })
