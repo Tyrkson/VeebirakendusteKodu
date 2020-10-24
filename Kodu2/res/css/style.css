@@ -202,3 +202,25 @@ nav div.avatar-container {
 .like-button.liked {
     background-color: #01579b;
 }
+
+.profile {
+    width: 50%;
+    margin: 4px auto;
+    box-shadow: 0 0 1px;
+    border-radius: 5px;
+    text-align:center;
+    float: left;
+}
+
+.profilePicture {
+    padding-top: 5px;
+    width:100px;
+    height:100px;
+    background-size:contain;
+    background-position:center;
+    border-radius:50%;
+}
+
+.follow-button {
+    background-color: darkmagenta;
+}
