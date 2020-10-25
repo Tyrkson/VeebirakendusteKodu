@@ -6,9 +6,12 @@
     <link rel="stylesheet" href="res/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="res/js/readPosts.js"></script>
+    <script src="res/js/toggleDropdown.js"></script>
+    <script src="res/js/readProfile.js"></script>
     <title>postIt! Just Post It</title>
   </head>
   <body>
+    <!--NAVIGATION BAR-->
     <header>
       <nav>
         <div class="logo-container">
@@ -17,13 +20,23 @@
         <div class="search-container">
           <input type="text" name="search"><button type="button">Search</button>
         </div>
+
+
         <div class="avatar-container">
-          <img src="res/images/avatar.png" class="avatar" alt="Me">
+          <div class="dropdown">
+            <img id="profile-picture" src="res/images/avatar.png" onclick="toggleDropdown()" class="dropbtn" alt="Me">
+            <div id="myDropdown" class="dropdown-content">
+              <a href="index.html">Browse</a>
+              <a href="login.html">Log out</a>
+            </div>
+
         </div>
+        </div>
+
       </nav>
     </header>
-    <section class="main-container">
 
+    <section class="main-container">
     </section>
   </body>
 </html>
