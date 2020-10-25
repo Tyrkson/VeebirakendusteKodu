@@ -7,6 +7,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="res/js/readProfiles.js"></script>
     <script src="res/js/Profile.js"></script>
+    <script src="res/js/toggleDropdown.js"></script>
+    <script src="res/js/readProfile.js"></script>
   </head>
   <body>
     <header>
@@ -18,7 +20,13 @@
           <input type="text" name="search"><button type="button">Search</button>
         </div>
         <div class="avatar-container">
-          <img src="res/images/avatar.png" class="avatar" alt="Me">
+          <div class="dropdown">
+            <img id="profile-picture" src="res/images/avatar.png" onclick="toggleDropdown()" class="dropbtn" alt="Me">
+            <div id="myDropdown" class="dropdown-content">
+              <a href="index.html">Home</a>
+              <a href="login.html">Log out</a>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
