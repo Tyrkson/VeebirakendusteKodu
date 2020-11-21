@@ -1,18 +1,45 @@
-//Siia tuleb kasutaja kasti osa
 <template>
-
+  <div class="user">
+    <img :src="user.avatar" />
+    <h2>{{user.firstname}} {{user.lastname}}</h2>
+    <button class="follow-button">Follow</button>
+  </div>
 </template>
 
 <script>
-
-
 export default {
   name: 'User',
+  props: ["user"]
 
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.user {
+    width: 40%;
+    display: inline-block;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    text-align: center;
+    margin: 1%;
 
+}
+.user img{
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: top;
+    margin: 5px;
+}
+
+.user h2{
+    font-size: 16px;
+}
+
+.follow-button{
+    background-color: #82008f;
+    border: 2px solid;
+}
 </style>

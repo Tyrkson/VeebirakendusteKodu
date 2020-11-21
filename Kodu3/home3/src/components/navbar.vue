@@ -1,5 +1,5 @@
 <template>
-  <header>
+<header>
   <nav>
     <div class="logo-container">
       <img src="../assets/logo.png" alt="postIt">
@@ -33,6 +33,17 @@ export default {
 </script>
 
 <style scoped>
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+header:hover {
+    box-shadow: 0 -20px 30px #4d4d4d;
+}
+
 nav {
     display: flex;
     background-color: #ffffff;
