@@ -8,17 +8,17 @@
       <input type="text" name="search"><button type="button">Search</button>
     </div>
     <div class="avatar-container">
-      <img class="avatar">
-      <div class="drop-down-container">
+      <img class="avatar" v-bind:src="user.avatar" v-on:click="isOpen = !isOpen">
+      <div class="drop-down-container" v-bind:class="{show: isOpen}">
         <span id="user-name">John Doe</span>
         <span id="user-email"></span>
         <span class="separator"></span>
         <span>
-          <a href="browse.html">Browse</a>
+          <router-link to="/browse" tag="a">Browse</router-link>
         </span>
         <span class="separator"></span>
         <span>
-          <a href="login.html">Log Out</a>
+          <router-link to="/" tag="a">Log Out</router-link>
         </span>
       </div>
     </div>
@@ -27,8 +27,22 @@
 </template>
 
 <script>
+import axios from 'axios';
+
+
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+  data() {
+    return {
+      isOpen: false,
+      user: false
+    }
+  },
+  created(){
+    axios.get('https://private-517bb-wad20postit.apiary-mock.com/profiles')
+      .then(res => this.user = res.data[0])
+      .catch(err => console.log(err));
+  }
 }
 </script>
 
@@ -99,6 +113,11 @@ nav div.avatar-container {
     text-align: left;
     display: none;
 }
+
+.show {
+  display: block;
+}
+
 .drop-down-container span{
     display: block;
 }
