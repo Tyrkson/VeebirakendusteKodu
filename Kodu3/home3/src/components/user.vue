@@ -17,8 +17,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .user {
-    width: 40%;
-    display: inline-block;
+    width: 45%;
     border: 1px solid #dedede;
     border-radius: 5px;
     text-align: center;

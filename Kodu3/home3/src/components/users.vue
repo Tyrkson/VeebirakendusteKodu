@@ -1,8 +1,13 @@
 //Siia tuleb browse.html põhi ehk ilma nende kasutaja kastideta
 <template>
   <body>
-    <section class="main-container" v-bind:key="user.id" v-for="user in users">
-      <User v-bind:user="user" />
+    <section class="main-container" >
+      <div class="users" v-bind:key="user.id" v-for="(user, i) in users">
+        <div class="test" v-if="i == 0 || i % 2 == 0">
+          <User class="left" v-bind:user="users[i]" />
+          <User class="right" v-if="users.length > i + 1" v-bind:user="users[i+1]" />
+        </div>
+      </div>
     </section>
   </body>
 </template>
@@ -39,4 +44,22 @@ export default {
     padding: 40px 15px 15px 15px;
     background-color: #ffffff;
 }
+
+.users {
+  display: flex;
+}
+
+.users > .test {
+  flex: 1 1 50%;
+  margin: 1%;
+}
+
+.test > .right {
+  float: right;
+}
+
+.test > .left {
+  float: left;
+}
+
 </style>
