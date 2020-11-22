@@ -11,7 +11,7 @@
       <img class="avatar" v-bind:src="user.avatar" v-on:click="isOpen = !isOpen">
       <div class="drop-down-container" v-bind:class="{show: isOpen}">
         <span id="user-name">John Doe</span>
-        <span id="user-email"></span>
+        <span id="user-email">{{user.email}}</span>
         <span class="separator"></span>
         <span>
           <router-link to="/browse" tag="a">Browse</router-link>
