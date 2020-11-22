@@ -8,10 +8,10 @@
       <input type="text" name="search"><button type="button">Search</button>
     </div>
     <div class="avatar-container">
-      <img class="avatar" v-bind:src="user.avatar" v-on:click="isOpen = !isOpen">
+      <img class="avatar" v-bind:src="userr.avatar" v-on:click="isOpen = !isOpen">
       <div class="drop-down-container" v-bind:class="{show: isOpen}">
-        <span id="user-name">John Doe</span>
-        <span id="user-email">{{user.email}}</span>
+        <span id="user-name">{{userr.firstname}} {{userr.lastname}}</span>
+        <span id="user-email">{{userr.email}}</span>
         <span class="separator"></span>
         <span>
           <router-link to="/browse" tag="a">Browse</router-link>
@@ -25,10 +25,7 @@
   </nav>
 </header>
 </template>
-
 <script>
-import axios from 'axios';
-
 
 export default {
   name: 'Navbar',
@@ -38,10 +35,13 @@ export default {
       user: false
     }
   },
-  created(){
-    axios.get('https://private-517bb-wad20postit.apiary-mock.com/profiles')
-      .then(res => this.user = res.data[0])
-      .catch(err => console.log(err));
+  computed: {
+    userr() {
+      return this.$store.state.user
+    }
+  },
+  mounted() {
+    this.$store.dispatch("getUser")
   }
 }
 </script>

@@ -8,7 +8,8 @@ Vue.use(Vuex);
 //to handle state
 const state = {
 posts: [],
-users: []
+users: [],
+user: {}
 }
 
 //to handle state
@@ -23,6 +24,10 @@ axios.get('https://private-517bb-wad20postit.apiary-mock.com/posts')
 getUsers({ commit }) {
     axios.get('https://private-517bb-wad20postit.apiary-mock.com/profiles')
     .then(response => {commit('SET_USERS', response.data)})
+    },
+getUser({ commit }) {
+    axios.get('https://private-517bb-wad20postit.apiary-mock.com/users/1')
+    .then(response => {commit('SET_USER', response.data)})
     }
 }
 
@@ -33,7 +38,10 @@ state.posts = posts
     },
 SET_USERS(state, users) {
     state.users = users
-}
+    },
+SET_USER(state, user) {
+    state.user = user
+    }
 }
 
 //export store module
