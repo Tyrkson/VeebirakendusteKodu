@@ -2,14 +2,19 @@
   <div class="user">
     <img :src="user.avatar" />
     <h2>{{user.firstname}} {{user.lastname}}</h2>
-    <button class="follow-button">Follow</button>
+    <button class="follow-button" v-bind:class="{ followed: isFollowed}" v-on:click="isFollowed = !isFollowed">Follow</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'User',
-  props: ["user"]
+  props: ["user"],
+  data() {
+    return {
+      isFollowed: false
+    }
+  }
 
 }
 </script>
@@ -40,5 +45,11 @@ export default {
 .follow-button{
     background-color: #82008f;
     border: 2px solid;
+}
+
+.follow-button.followed{
+    background-color: #ffffff;
+    border: 1px solid #82008f;
+    color: #82008f;
 }
 </style>

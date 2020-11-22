@@ -40,6 +40,7 @@ export default {
 .main-container {
     width: 50%;
     min-height: 100%;
+    max-height: 100%;
     margin: auto auto;
     padding: 40px 15px 15px 15px;
     background-color: #ffffff;
@@ -51,7 +52,7 @@ export default {
 
 .users > .test {
   flex: 1 1 50%;
-  margin: 1%;
+  margin: 0%;
 }
 
 .test > .right {
