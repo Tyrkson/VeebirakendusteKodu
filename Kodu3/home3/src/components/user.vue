@@ -1,7 +1,7 @@
 <template>
   <div class="user">
     <img :src="user.avatar" />
-    <h2>{{user.firstname}} {{user.lastname}}</h2>
+    <h2>{{user.firstname | capitalize}} {{user.lastname | capitalize}}</h2>
     <button class="follow-button" v-bind:class="{ followed: isFollowed}" v-on:click="isFollowed = !isFollowed">Follow</button>
   </div>
 </template>
@@ -15,7 +15,6 @@ export default {
       isFollowed: false
     }
   }
-
 }
 </script>
 
