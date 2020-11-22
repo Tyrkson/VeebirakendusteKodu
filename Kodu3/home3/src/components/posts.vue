@@ -9,22 +9,19 @@
 <script>
 
 import Post from './Post';
-import axios from 'axios';
 
 export default {
   name: 'Posts',
   components: {
     Post
   },
-  data(){
-    return {
-      posts: []
+  computed: {
+    posts() {
+      return this.$store.state.posts
     }
   },
-  created(){
-    axios.get('https://private-517bb-wad20postit.apiary-mock.com/posts')
-      .then(res => this.posts = res.data)
-      .catch(err => console.log(err));
+  mounted() {
+    this.$store.dispatch("getPosts")
   }
 }
 </script>

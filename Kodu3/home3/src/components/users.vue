@@ -15,22 +15,19 @@
 <script>
 
 import User from './user';
-import axios from 'axios';
 
 export default {
   name: 'Users',
   components: {
     User
   },
-  data(){
-    return {
-      users: []
+  computed: {
+    users() {
+      return this.$store.state.users
     }
   },
-  created(){
-    axios.get('https://private-517bb-wad20postit.apiary-mock.com/profiles')
-      .then(res => this.users = res.data)
-      .catch(err => console.log(err));
+  mounted() {
+    this.$store.dispatch("getUsers")
   }
 }
 </script>
