@@ -29,21 +29,22 @@ function displayPost(d){
     }
   }
 
-  let div = `<div class="post">
-        <div class="post-author">
-          <span class="post-author-info">
-            <img src="${d.author.avatar}" alt="Post author">
-            <small>${d.author.firstname} ${d.author.lastname}</small>
-          </span>
-              <small>${d.createTime}</small>
-          </div>`
-            + media +
-            `<div class="post-title">
-              <h3>${d.text != null ? d.text : ""}</h3>
-            </div>
-            <div class="post-actions">
-              <button type="button" name="like" class="like-button">${d.likes}</button>
-          </div>
-        </div>`
+  let div = `
+  <div class="post">
+    <div class="post-author">
+      <span class="post-author-info">
+        <img src="${d.author.avatar}" alt="Post author">
+        <small>${d.author.firstname} ${d.author.lastname}</small>
+      </span>
+      <small>${d.createTime}</small>
+    </div>`
+        + media +
+    `<div class="post-title">
+      <h3>${d.text != null ? d.text : ""}</h3>
+    </div>
+      <div class="post-actions">
+        <button type="button" name="like" class="like-button">${d.likes}</button>
+    </div>
+  </div>`
   $(".main-container").append(div);
 }
