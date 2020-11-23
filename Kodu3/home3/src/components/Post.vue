@@ -18,7 +18,7 @@
     <h3>{{post.text}}</h3>
   </div>
   <div class="post-actions">
-    <button type="button" class="like-button" v-bind:class="{ liked: isLiked}" v-on:click="isLiked = !isLiked"/>
+    <button type="button" class="like-button" v-bind:class="{ liked: isLiked}" v-on:click="isLiked = !isLiked">{{post.likes}}</button>
   </div>
 </div>
 
