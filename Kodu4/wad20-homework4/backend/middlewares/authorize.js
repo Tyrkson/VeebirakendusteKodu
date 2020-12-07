@@ -1,4 +1,6 @@
 const UserModel = require('../models/UserModel');
+const jwt = require('../library/jwt');
+
 
 module.exports = (request, response, next) => {
 
@@ -9,11 +11,16 @@ module.exports = (request, response, next) => {
         decoded user from access token.
     */
 
+    //console.log("Ho: " + jwt.verifyAccessToken(request.headers.authorization.split(" ")[1]).user);
     if (request.headers.authorization) {
-        UserModel.getById(1, (user) => {
-            request.currentUser = user;
-            next();
-        });
+        //For some reason it saves some kind of a 'bearer' in to the autohorization, so I just ignore it
+        let result = jwt.verifyAccessToken(request.headers.authorization.split(" ")[1]);
+        if(result != false){
+          UserModel.getById(result.user, (user) => {
+              request.currentUser = user;
+              next();
+          });
+        }
     } else {
         // if there is no authorization header
 
