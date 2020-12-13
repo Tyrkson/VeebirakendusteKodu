@@ -109,10 +109,22 @@ describe('Posts', () => {
         const items = wrapper.findAll('.post');
         expect(items.length).toEqual(testData.length);
     });
+
+            //if the image/video does not exist
+            if (items.at(i) == null) {
+                expect(items.find('post-image').exists()).toBeFalsy();            }
+            if (testData.get(i).media.equals("image")) {
+                expect(items.find('post-image img').exists()).toBeTruthy();
+            }
+            if (testData.get(i).media.equals("video")) {
+                expect(items.find('post-image video').exists()).toBeTruthy();
+            }
+        }
+    });
+
     it('should display the post create time in the correct format', () => {
         const items = wrapper.findAll('.post post-author small');
         for (var i = 0; i < items.length; i++) {
-            console.log(items.at(i))
             expect(items.at(i)).toEqual(moment(items.at(i)).format('LLLL'));
         }
     });
