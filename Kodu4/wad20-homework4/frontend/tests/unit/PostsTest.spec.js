@@ -110,6 +110,12 @@ describe('Posts', () => {
         expect(items.length).toEqual(testData.length);
     });
 
+    it('should render image or video tags depending on media.type property', () => {
+        const items = wrapper.findAll('.post post-image');
+
+        //for every post image
+        for (var i = 0; i < items.length; i++) {
+
             //if the image/video does not exist
             if (items.at(i) == null) {
                 expect(items.find('post-image').exists()).toBeFalsy();            }
