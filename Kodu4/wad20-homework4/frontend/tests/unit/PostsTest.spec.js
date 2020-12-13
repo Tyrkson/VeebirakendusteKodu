@@ -113,28 +113,29 @@ describe('Posts', () => {
         expect(items.length).toEqual(testData.length);
     });
 
-
     //TEST 2
     it('should render image or video tags depending on media.type property', () => {
-        const items = wrapper.findAll('.post post-image');
+        const items = wrapper.findAll('.post');
 
         //for every post image
         for (var i = 0; i < items.length; i++) {
 
             //if the image/video does not exist
-            if (items.at(i) == null) {
-                expect(items.find('post-image').exists()).toBeFalsy();            
+            if (testData[i].media == null) {
+                expect(items.at(i).find('.post-image').exists()).toBeFalsy();            
             }
 
             //if the post is an image
-            if (testData.get(i).media.equals("image")) {
-                expect(items.find('post-image img').exists()).toBeTruthy();
+            else if (testData[i].media.type == "image") {
+                expect(items.at(i).find('.post-image img').exists()).toBeTruthy();
             }
 
             //if the post is a video
-            if (testData.get(i).media.equals("video")) {
-                expect(items.find('post-image video').exists()).toBeTruthy();
+            else if (testData[i].media.type == "video") {
+                expect(items.at(i).find('.post-image video').exists()).toBeTruthy();
             }
+
+            
         }
     });
 
