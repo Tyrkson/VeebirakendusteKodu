@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1607890363119" clover="3.2.0">
-  <project timestamp="1607890363119" name="All files">
+<coverage generated="1607891103375" clover="3.2.0">
+  <project timestamp="1607891103375" name="All files">
     <metrics statements="63" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="39" coveredmethods="12" elements="102" coveredelements="31" complexity="0" loc="63" ncloc="63" packages="1" files="8" classes="8"/>
     <file name="AddPost.vue" path="C:\Users\Hanna\Documents\GitHub\VeebirakendusteKodu\Kodu4\wad20-homework4\frontend\src\components\AddPost.vue">
       <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>

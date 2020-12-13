@@ -109,4 +109,12 @@ describe('Posts', () => {
         const items = wrapper.findAll('.post');
         expect(items.length).toEqual(testData.length);
     });
+    it('should display the post create time in the correct format', () => {
+        const items = wrapper.findAll('.post post-author small');
+        for (var i = 0; i < items.length; i++) {
+            console.log(items.at(i))
+            expect(items.at(i)).toEqual(moment(items.at(i)).format('LLLL'));
+        }
+    });
+
 });
