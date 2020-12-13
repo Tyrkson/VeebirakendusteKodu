@@ -2,6 +2,7 @@ import {mount, createLocalVue} from '@vue/test-utils'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import Posts from "../../src/components/Posts.vue";
+import moment from 'moment';
 
 const localVue = createLocalVue();
 
@@ -102,5 +103,10 @@ describe('Posts', () => {
 
     it('1 == 1', function () {
         expect(true).toBe(true)
+    });
+
+    it('should render as many posts as there are in testData', () => {
+        const items = wrapper.findAll('.post');
+        expect(items.length).toEqual(testData.length);
     });
 });
