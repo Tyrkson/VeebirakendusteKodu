@@ -105,11 +105,16 @@ describe('Posts', () => {
         expect(true).toBe(true)
     });
 
+
+
+    //TEST 1
     it('should render as many posts as there are in testData', () => {
         const items = wrapper.findAll('.post');
         expect(items.length).toEqual(testData.length);
     });
 
+
+    //TEST 2
     it('should render image or video tags depending on media.type property', () => {
         const items = wrapper.findAll('.post post-image');
 
@@ -118,16 +123,23 @@ describe('Posts', () => {
 
             //if the image/video does not exist
             if (items.at(i) == null) {
-                expect(items.find('post-image').exists()).toBeFalsy();            }
+                expect(items.find('post-image').exists()).toBeFalsy();            
+            }
+
+            //if the post is an image
             if (testData.get(i).media.equals("image")) {
                 expect(items.find('post-image img').exists()).toBeTruthy();
             }
+
+            //if the post is a video
             if (testData.get(i).media.equals("video")) {
                 expect(items.find('post-image video').exists()).toBeTruthy();
             }
         }
     });
 
+
+    //TEST 3
     it('should display the post create time in the correct format', () => {
         const items = wrapper.findAll('.post post-author small');
         for (var i = 0; i < items.length; i++) {
